@@ -1,2 +1,18 @@
-# mycode
-Learning to track my code
+# mycode (Kubernetes)
+
+Learning Kubernetes
+
+## Getting Started
+
+
+
+### Prerequisites
+
+
+## Built With
+
+
+
+## Authors
+
+* **Ipsita** - *Initial work*
