@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webby257
+  labels:
+    app: webby257
+spec:
+  selector:
+    matchLabels:
+      app: webby257
+  replicas: 3
+  template:
+    metadata:
+      name: webby257
+      labels:
+        app: webby257
+    spec:
+      containers:
+      - 
+       name: webby257
+       image: reg.alta3.com/257-ghosh-webby
+       ports:
+       -       
+        name: webb257 # name for port mapping
+        containerPort: 8888
+        protocol: TCP

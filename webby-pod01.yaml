@@ -1,0 +1,16 @@
+apiVersion: v1 # the api version to use
+kind: Pod # example Deployment / Pod
+metadata:
+  name: webservice257
+  labels:
+    name: webservice257 # a metadata label name(s)
+spec:
+  containers:
+  -
+    name: webby # name of container
+    image: reg.alta3.com/257-ghosh-webby  # name of the image to use
+    ports:
+     -
+       name: web257 # name for port mapping
+       containerPort: 8888
+       protocol: TCP

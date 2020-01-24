@@ -1,0 +1,96 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"what":"what"},"name":"nginx","namespace":"default"},"spec":{"containers":[{"image":"nginx:1.7.9","name":"nginx","ports":[{"containerPort":80}]}]}}
+  creationTimestamp: "2020-01-22T22:13:57Z"
+  labels:
+    app: web_service
+    what: what
+    importance: critical
+    customer: internal_use
+  name: nginx
+  namespace: default
+  resourceVersion: "298450"
+  selfLink: /api/v1/namespaces/default/pods/nginx
+  uid: bdfbe2ab-7b24-4ae7-9615-6052a74b1c51
+spec:
+  containers:
+  - image: nginx:1.7.9
+    imagePullPolicy: IfNotPresent
+    name: nginx
+    ports:
+    - containerPort: 80
+      protocol: TCP
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-h9rb7
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: k8s-257-node-03
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-h9rb7
+    secret:
+      defaultMode: 420
+      secretName: default-token-h9rb7
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2020-01-22T22:13:57Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2020-01-22T22:14:17Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2020-01-22T22:14:17Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2020-01-22T22:13:57Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://f505c785e99e38548f059584eb6451ec7bb9c6a4339e8a183be6327a59f393e8
+    image: docker.io/library/nginx:1.7.9
+    imageID: sha256:35d28df486f6150fa3174367499d1eb01f22f5a410afe4b9581ac0e0e58b3eaf
+    lastState:
+      terminated:
+        containerID: containerd://ed712c9fd0925b4c9b7b904413e0fe6c9ad1eac1ace2687ced1932832ed04eaa
+        exitCode: 0
+        finishedAt: "2020-01-22T22:14:16Z"
+        reason: Completed
+        startedAt: "2020-01-22T22:13:58Z"
+    name: nginx
+    ready: true
+    restartCount: 1
+    state:
+      running:
+        startedAt: "2020-01-22T22:14:17Z"
+  hostIP: 10.13.114.120
+  phase: Running
+  podIP: 192.168.186.28
+  qosClass: BestEffort
+  startTime: "2020-01-22T22:13:57Z"

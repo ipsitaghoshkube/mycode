@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: contextpod
+  labels:
+    name: contextpod
+spec:
+  containers:
+  -
+    name: contextpod-web
+    image: mhausenblas/simpleservice:0.5.0
+    ports:
+    -
+      name: web
+      containerPort: 9876
+      protocol: TCP
