@@ -1,6 +1,7 @@
 # mycode (Kubernetes)
 
 Learning Kubernetes
+Learn version control with git
 
 ## Getting Started
 
